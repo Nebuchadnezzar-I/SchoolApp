@@ -9,10 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+class UserModel {
+    var username: String
+    var email: String
+    var hashedPassword: String
+
+    init(username: String, hashedPassword: String, email: String) {
+        self.username = username
+        self.hashedPassword = hashedPassword
+        self.email = email
     }
 }
